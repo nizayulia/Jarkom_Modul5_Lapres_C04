@@ -230,14 +230,18 @@ route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.0.1
 ### 1. Memberikan IP pada subnet SIDOARJO dan GRESIK secara dinamis 
 
 Dilakukan dengan cara ``` nano /etc/network/interfaces``` pada SIDOARJO dan GRESIK
+
 <img src="assets/Picture5.png" width="400" height="300">
+
 <img src="assets/Picture6.png" width="400" height="300">
 
 ### 2. Konfigurasi DHCP server MOJOKERTO 
 - Install dhcp-server ```apt-get install isc-dhcp-server```
 - Konfigurasi interfaces ```nano /etc/default/isc-dhcp-server``` dengan ```INTERFACESv4="eth0"```
 - Konfigurasi pada dhcp-server  ```nano /etc/dhcp/dhcpd.conf ``` seperti pada gambar berikut :
+
 <img src="assets/Picture7.png">
+
 - Restart dengan cara  ```service isc-dhcp-server restart```
 
 ### 3. DHCP Relay
