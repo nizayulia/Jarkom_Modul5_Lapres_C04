@@ -339,7 +339,7 @@ iptables -A INPUT -s 192.168.2.0/24 -j REJECT
 
 ### 6. SURABAYA disetting sehingga setiap request dari client yang mengakses DNS Server akan didistribusikan secara bergantian pada PROBOLINGGO port 80 dan MADIUN port 80.
 
-<BELUM KAMI KERJAKAN>
+BELUM KAMI KERJAKAN
 
 ### 7. Bibah ingin agar semua paket didrop oleh firewall (dalam topologi) tercatat dalam log pada setiap UML yang memiliki aturan drop.
 
@@ -355,3 +355,5 @@ iptables -A LOGGING -j DROP
 
 - Kemudian, jalankan file tersebut dengan perintah `bash no7.sh`.
 - Semua catatan yang didrop akan otomatis muncul pada UML yang bersangkutan.	
+
+<img src="assets/no7Mal.png">
