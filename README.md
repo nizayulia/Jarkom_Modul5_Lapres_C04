@@ -198,11 +198,13 @@ Lalu melakukan ```service networking restart``` pada setiap uml.
 
 
 ## C. Routing
-Melakukan routing pada setiap router dengan cara ```nano /etc/sysctl.conf```
+- Pada setiap router jangan lupa melakukan setting sysctl, dengan mengetikkan perintah `nano /etc/sysctl.conf`.
+- Hilangkan tanda pagar (#) pada bagian `net.ipv4.ip_forward=1`. Kemudian ketikkan `sysctl -p` untuk mengaktifkan perubahan yang ada.
+- Routing dilakukan pada setiap device router dengan membuat file **route.sh**, syntax :
+
+
 **SURABAYA**
 ```
-nano route.sh
-
 #to Malang & Mojokerto via Batu
 ip route add 10.151.77.40/29 via 192.168.0.6
 #to Sidoarjo via Batu
@@ -211,8 +213,6 @@ ip route add 192.168.2.0/24 via 192.168.0.6
 ip route add 192.168.1.0/24 via 192.168.0.2
 #to Probolinggo & Madiun via Kediri
 ip route add 192.168.0.8/29 via 192.168.0.2
-
-bash route.sh
 ```
 **BATU**
 ```
@@ -224,7 +224,7 @@ route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.0.5
 route add -net 0.0.0.0 netmask 0.0.0.0 gw 192.168.0.1
 
 ```
-
+- Jalankan **route.sh**.
 
 ## D. DHCP
 ### 1. Memberikan IP pada subnet SIDOARJO dan GRESIK secara dinamis 
@@ -333,7 +333,7 @@ iptables -A INPUT -s 192.168.2.0/24 -j REJECT
 
 <img src="assets/ping5Gresik.JPG">
 
-- Tetapi selain waktu tersebut akses akan accept.
+- Tetapi selain waktu tersebut akses akan diaccept.
 
 <img src="assets/ping5Gr.JPG">
 
