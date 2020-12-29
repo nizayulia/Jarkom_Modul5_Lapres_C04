@@ -133,8 +133,10 @@ iface eth0 inet static
 address 10.151.77.42
 netmask 255.255.255.248
 gateway 10.151.77.41
+```
 
-MOJOKERTO
+**MOJOKERTO**
+```
 auto lo
 iface lo inet loopback
 
