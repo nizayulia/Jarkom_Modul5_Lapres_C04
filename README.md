@@ -304,9 +304,9 @@ iptables -A INPUT -s 192.168.2.0/24 -j REJECT
 - Kemudian, jalankan file tersebut dengan perintah `bash no4.sh`.
 - Untuk mengeceknya, lakukan ping ke **IP Malang** `ping 10.151.77.42` dari UML **Sidoarjo**.
 - Kita bisa mengakses pada hari Senin-Jumat pada pukul 07:00-17:00.
-<img src="assets/ping4Sido.JPG">
-- Tetapi selain waktu tersebut akses akan direject, seperti gambar berikut:
 <img src="assets/ping4Sidoarjo.JPG">
+- Tetapi selain waktu tersebut akses akan direject, seperti gambar berikut:
+<img src="assets/ping4Sido.JPG">
 
 ### 5. Akses dari subnet GRESIK hanya diperbolehkan pada pukul 17.00 hingga pukul 07.00 setiap harinya.
 
