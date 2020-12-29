@@ -279,7 +279,7 @@ Dilakukan pada router KEDIRI, BATU, SURABAYA
 ```iptables -A FORWARD -d 10.151.77.40/29 -i eth0 -p tcp --dport 22 -j DROP```
 - Kemudian, jalankan file tersebut dengan perintah `bash no2.sh`.
 - Untuk mengeceknya, di UML **Malang** ketik perintah `nc -l -p 22`.
-- Buka terminal Putty, ketikkan printah `nc 10.151.77.42 22`. Di terminal Putty ini ketikan ‘apapun’, nanti akan muncul hasil yang sama di UML Malang.
+- Buka terminal Putty, ketikkan printah `nc 10.151.77.42 22`. Di terminal Putty ini ketikan ‘apapun’, tidak akan muncul hasil yang sama di UML Malang karena paket didrop.
 - Bukti screenshoot:
 <img src="assets/nomer2.jpg">
 
@@ -365,6 +365,6 @@ iptables -A LOGGING -j DROP
 - Kemudian, jalankan file tersebut dengan perintah `bash no7.sh`.
 - Semua catatan yang didrop akan otomatis muncul pada UML yang bersangkutan.	
 
-<img src="assets/no7Sby.png">
+<img src="assets/no7Sby.JPG">
 <img src="assets/no7Mal.png">
-<img src="assets/no7Mojo.png">
+<img src="assets/no7Mojo.JPG">
